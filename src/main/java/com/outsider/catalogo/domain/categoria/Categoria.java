@@ -1,0 +1,22 @@
+package com.outsider.catalogo.domain.categoria;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity(name = "categorias")
+@Table(name = "tb_categorias")
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+public class Categoria {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+    private Boolean ativo;
+
+}
